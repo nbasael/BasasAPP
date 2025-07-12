@@ -1,8 +1,6 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Plus, Minus } from 'lucide-react-native';
 import { colors } from '@/constants/colors';
 import { translations } from '@/constants/translations';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export const PlayerCard = ({
     player,
@@ -25,7 +23,7 @@ export const PlayerCard = ({
                             disabled={disabled || tricks === 0}
                             activeOpacity={0.7}
                         >
-                            <Minus size={18} color={colors.background} />
+                            <Text>Quitar</Text>
                         </TouchableOpacity>
                     )}
                     <Text style={styles.tricksValue}>{tricks}</Text>
@@ -36,7 +34,7 @@ export const PlayerCard = ({
                             disabled={disabled}
                             activeOpacity={0.7}
                         >
-                            <Plus size={18} color={colors.background} />
+                            <Text>Agregar</Text>
                         </TouchableOpacity>
                     )}
                 </View>

@@ -1,12 +1,10 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert } from 'react-native';
-import { router } from 'expo-router';
 import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
-import { Trash2, Calendar, Users, Trophy } from 'lucide-react-native';
 import { colors } from '@/constants/colors';
 import { translations } from '@/constants/translations';
 import { useHistoryStore } from '@/store/historyStore';
+import { router } from 'expo-router';
+import { Alert, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function HistoryScreen() {
     const { gameHistory, clearHistory, deleteGame } = useHistoryStore();
@@ -87,15 +85,12 @@ export default function HistoryScreen() {
                         <View style={styles.gameHeader}>
                             <View style={styles.gameInfo}>
                                 <View style={styles.gameRow}>
-                                    <Calendar size={16} color={colors.textSecondary} />
                                     <Text style={styles.gameDate}>{formatDate(game.date)}</Text>
                                 </View>
                                 <View style={styles.gameRow}>
-                                    <Users size={16} color={colors.textSecondary} />
                                     <Text style={styles.gamePlayers}>{getPlayerNames(game.players)}</Text>
                                 </View>
                                 <View style={styles.gameRow}>
-                                    <Trophy size={16} color={colors.primary} />
                                     <Text style={styles.gameWinner}>
                                         {game.winner.name} ({game.winner.totalScore} pts)
                                     </Text>
@@ -105,7 +100,7 @@ export default function HistoryScreen() {
                                 style={styles.deleteButton}
                                 onPress={() => handleDeleteGame(game.id, game.winner.name)}
                             >
-                                <Trash2 size={20} color={colors.error} />
+                                BORRAR
                             </TouchableOpacity>
                         </View>
 

@@ -1,7 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import { Minus, Plus } from 'lucide-react-native';
 import { colors } from '@/constants/colors';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export const NumberInput = ({
     label,
@@ -43,7 +41,8 @@ export const NumberInput = ({
                     onPress={handleDecrement}
                     disabled={(value ?? 0) <= min}
                 >
-                    <Minus size={20} color={(value ?? 0) <= min ? colors.textSecondary : colors.text} />
+                    {/* <Minus size={20} color={(value ?? 0) <= min ? colors.textSecondary : colors.text} /> */}
+                    <Text>Quitar</Text>
                 </TouchableOpacity>
 
                 <TextInput
@@ -60,7 +59,8 @@ export const NumberInput = ({
                     onPress={handleIncrement}
                     disabled={(value ?? 0) >= max}
                 >
-                    <Plus size={20} color={(value ?? 0) >= max ? colors.textSecondary : colors.text} />
+                    {/* <Plus size={20} color={(value ?? 0) >= max ? colors.textSecondary : colors.text} /> */}
+                    <Text>Agregar</Text>
                 </TouchableOpacity>
             </View>
         </View>

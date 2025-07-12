@@ -5,7 +5,7 @@ import { translations } from '@/constants/translations';
 import { useGameStore } from '@/store/gameStore';
 import { useHistoryStore } from '@/store/historyStore';
 import { Link } from 'expo-router';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen() {
     const {
@@ -32,8 +32,11 @@ export default function HomeScreen() {
     return (
         <ScrollView style={styles.container} contentContainerStyle={styles.content}>
             <View style={styles.header}>
-                <Text style={styles.title}>{translations.appTitle}</Text>
-                <Text style={styles.subtitle}>{translations.appSubtitle}</Text>
+                <Image
+                    source={require('@/assets/images/Icon.png')}
+                    style={styles.image}
+                    resizeMode="contain"
+                />
             </View>
 
             <Card style={styles.card}>
@@ -107,6 +110,11 @@ const styles = StyleSheet.create({
     header: {
         alignItems: 'center',
         marginVertical: 32,
+    },
+    image: {
+        width: 200,
+        height: 200,
+        borderRadius: 30,
     },
     title: {
         fontSize: 42,

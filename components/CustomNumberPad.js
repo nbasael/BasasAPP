@@ -1,8 +1,6 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Delete } from 'lucide-react-native';
 import { colors } from '@/constants/colors';
 import { translations } from '@/constants/translations';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export const CustomNumberPad = ({ onNumberPress, onBackspace, onConfirm, value, availableNumbers }) => {
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -39,7 +37,7 @@ export const CustomNumberPad = ({ onNumberPress, onBackspace, onConfirm, value, 
                 ))}
 
                 <TouchableOpacity style={styles.actionButton} onPress={onBackspace} activeOpacity={0.7}>
-                    <Delete size={24} color={colors.background} />
+                    <Text>Borrar</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity

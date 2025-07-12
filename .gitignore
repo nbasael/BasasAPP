@@ -9,6 +9,15 @@ dist/
 web-build/
 expo-env.d.ts
 
+# React Native
+android/
+ios/
+.expo-shared/
+
+# Build output
+build/
+dist/
+
 # Native
 .kotlin/
 *.orig.*
@@ -37,3 +46,4 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+

@@ -1,6 +1,5 @@
 import { colors } from '@/constants/colors';
 import { translations } from '@/constants/translations';
-import { Undo2 } from 'lucide-react-native';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export const UndoButton = ({ onPress, disabled = false, lastAction = null }) => {
@@ -14,7 +13,7 @@ export const UndoButton = ({ onPress, disabled = false, lastAction = null }) => 
             activeOpacity={0.7}
         >
             <View style={styles.content}>
-                <Undo2 size={18} color={disabled ? colors.textSecondary : colors.text} />
+                {/* <Undo2 size={18} color={disabled ? colors.textSecondary : colors.text} /> */}
                 <Text style={[styles.text, disabled && styles.disabledText]}>
                     {translations.undo}
                 </Text>
